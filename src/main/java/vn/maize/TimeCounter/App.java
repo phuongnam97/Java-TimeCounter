@@ -33,11 +33,11 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-//    	URL url = new URL("resources\\vn\\maize\\TimeCounter\\" + fxml + ".fxml");
-    	URL url = App.class.getResource("/resources/vn/maize/TimeCounter/" + fxml + ".fxml");
-
-//        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        FXMLLoader fxmlLoader = new FXMLLoader(url);
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+    	
+    	// Uncomment For Application build
+//    	  URL url = App.class.getResource("/resources/vn/maize/TimeCounter/" + fxml + ".fxml");
+//        FXMLLoader fxmlLoader = new FXMLLoader(url);
         return fxmlLoader.load();
     }
     
